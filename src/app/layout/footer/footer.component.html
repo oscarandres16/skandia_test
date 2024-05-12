@@ -1,8 +1,8 @@
 <mat-card class="w100">
   <mat-card-content>
-    <div class="default-row justify-space-between align-end gap-20">
+    <div class="default-row justify-space-between align-end gap-10 lt-sm-column">
       <!-- Contact Info -->
-      <div class="contact-info-container w100 default-column gap-5">
+      <div class="contact-info-container w100 default-column gap-5 flex-5 lt-sm-align-center">
         <img class="footer-logo" src="../../../assets/imgs/svgs/Group 123.svg" alt="Skandia" title="Skandia" />
         <p class="footer-text">© 2019 Skandia</p>
         <div>
@@ -31,14 +31,14 @@
       </div>
       <!-- END Contact Info -->
       <!-- Links -->
-      <div class="links-container w100 default-column gap-5">
+      <div class="links-container w100 default-column gap-5 flex-5 lt-sm-align-center">
         <div *ngFor="let link of links">
           <a [href]="link?.url">{{ link?.name }}</a>
         </div>
       </div>
       <!-- END Links -->
       <!-- Social Media -->
-      <div class="social-media-container default-row justify-space-between align-end gap-20">
+      <div class="social-media-container w100 default-row justify-space-between align-end gap-20 lt-sm-justify-center flex-1 lt-sm-align-center">
         <div *ngFor="let socialMedia of socialMediaLinks">
           <a [href]="socialMedia?.url" target="_blank">
             <img

@@ -8,6 +8,15 @@ mat-divider {
   width: 2px;
   height: 28px;
   background-color: #3f3f3f;
+
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: max-content;
 }
 
 mat-icon {
@@ -87,4 +96,8 @@ mat-drawer {
         hue-rotate(260deg) brightness(101%) contrast(101%);
     }
   }
+}
+
+::ng-deep .mat-mdc-menu-panel {
+  width: 200px;
 }

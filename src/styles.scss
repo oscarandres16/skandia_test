@@ -634,6 +634,9 @@ body {
   .lt-md-gap-20 {
     gap: 20px;
   }
+  .lt-md-hide {
+    display: none;
+  }
 }
 
 /* lt-lg */
@@ -704,6 +707,9 @@ body {
   }
   .lt-lg-gap-20 {
     gap: 20px;
+  }
+  .lt-lg-hide {
+    display: none;
   }
 }
 
@@ -778,6 +784,9 @@ body {
   }
   .lt-xl-gap-30 {
     gap: 30px;
+  }
+  .lt-xl-hide {
+    display: none;
   }
 }
 
@@ -921,6 +930,9 @@ body {
   .gt-sm-gap-20 {
     gap: 20px;
   }
+  .gt-sm-hide {
+    display: none;
+  }
 }
 
 /* gt-md */
@@ -991,6 +1003,9 @@ body {
   }
   .gt-md-gap-20 {
     gap: 20px;
+  }
+  .gt-md-hide {
+    display: none;
   }
 }
 
@@ -1065,6 +1080,9 @@ body {
   }
   .gt-lg-gap-150 {
     gap: 150px;
+  }
+  .gt-lg-hide {
+    display: none;
   }
 }
 

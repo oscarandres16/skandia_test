@@ -7,11 +7,14 @@
       <!-- Logo and Slogan -->
       <div class="default-row gap-10 align-center justify-start flex-1">
         <img src="../../../assets/imgs/svgs/Group 123.svg" alt="" />
-        <mat-divider [vertical]="true"></mat-divider>
-        <h2 class="title">Plan Financiero Digital - FPX</h2>
+        <mat-divider></mat-divider>
+        <h2 class="title lt-sm-hide">Plan Financiero Digital - FPX</h2>
       </div>
+      <!-- END Logo and Slogan -->
       <!-- Links and PQRS -->
-      <div class="default-row gap-10 align-center justify-end flex-1">
+      <div
+        class="default-row gap-10 align-center justify-end flex-1 lt-md-hide"
+      >
         <div class="icon-and-link">
           <img
             src="../../../assets/imgs/svgs/Happy.svg"
@@ -38,6 +41,45 @@
           </a>
         </div>
       </div>
+      <!-- END Links and PQRS -->
+      <!-- [Responsive] Links and PQRS -->
+      <div
+        class="default-row gap-10 align-center justify-end flex-1 gt-sm-hide"
+      >
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="gt-sm-hide">
+          <div class="default-column gap-10 w100 justify-start align-center">
+            <div class="icon-and-link">
+              <img
+                src="../../../assets/imgs/svgs/Happy.svg"
+                alt="Tu Financial Planner"
+                title="Tu Financial Planner"
+              />
+              <a href="#">Tu Financial Planner</a>
+            </div>
+            <div class="icon-and-link">
+              <img
+                src="../../../assets/imgs/svgs/hand3.svg"
+                alt="Aportes"
+                title="Aportes"
+              />
+              <a href="#">Aportes</a>
+            </div>
+            <div class="icon-with-link">
+              <a href="#">
+                <img
+                  src="../../../assets/imgs/svgs/comp faq.svg"
+                  alt="Preguntas frecuentes"
+                  title="Preguntas frecuentes"
+                />
+              </a>
+            </div>
+          </div>
+        </mat-menu>
+      </div>
+      <!-- END [Responsive] Links and PQRS -->
     </div>
   </div>
 </mat-toolbar>
