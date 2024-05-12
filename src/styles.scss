@@ -57,6 +57,10 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+* {
+  color: #3f3f3f;
+}
+
 .default-row {
   flex-direction: row;
   display: flex;
@@ -1140,4 +1144,16 @@ body {
 
 .m-0 {
   margin: 0px !important;
+}
+
+a {
+  color: #00c83c;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+
+  &:hover {
+    color: #fe9200;
+  }
 }

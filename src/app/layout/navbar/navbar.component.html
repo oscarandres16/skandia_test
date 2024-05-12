@@ -32,13 +32,12 @@
           <a href="#">Aportes</a>
         </div>
         <div class="icon-with-link">
-          <a href="#">
-            <img
-              src="../../../assets/imgs/svgs/comp faq.svg"
-              alt="Preguntas frecuentes"
-              title="Preguntas frecuentes"
-            />
-          </a>
+          <img
+            src="../../../assets/imgs/svgs/comp faq.svg"
+            alt="Preguntas frecuentes"
+            title="Preguntas frecuentes"
+          />
+          <a href="#">Preguntas frecuentes</a>
         </div>
       </div>
       <!-- END Links and PQRS -->
@@ -68,13 +67,12 @@
               <a href="#">Aportes</a>
             </div>
             <div class="icon-with-link">
-              <a href="#">
-                <img
-                  src="../../../assets/imgs/svgs/comp faq.svg"
-                  alt="Preguntas frecuentes"
-                  title="Preguntas frecuentes"
-                />
-              </a>
+              <img
+                src="../../../assets/imgs/svgs/comp faq.svg"
+                alt="Preguntas frecuentes"
+                title="Preguntas frecuentes"
+              />
+              <a href="#">Preguntas frecuentes</a>
             </div>
           </div>
         </mat-menu>
@@ -83,13 +81,22 @@
     </div>
   </div>
 </mat-toolbar>
-<mat-drawer-container autosize hasBackdrop="false">
-  <mat-drawer #drawer hasBackdrop="false" mode="side" [opened]="true">
+<mat-drawer-container autosize style="min-height: 60vh" hasBackdrop="false">
+  <mat-drawer
+    #drawer
+    hasBackdrop="false"
+    mode="over"
+    [opened]="true"
+    [style.width.px]="sidenavExpanded ? 200 : 50"
+  >
     <mat-nav-list class="p-0">
       <mat-list-item *ngFor="let menuItem of menuItems" class="h100 p-0">
         <div
-          class="default-row gap-10 justify-center align-center menu-item selected-item"
-          [ngClass]="{ 'selected-item': selectedMenuItem?.id === menuItem?.id }"
+          class="default-row gap-10 justify-center align-center"
+          [ngClass]="{
+            'selected-item': selectedMenuItem?.id === menuItem?.id,
+            'menu-item': selectedMenuItem?.id !== menuItem?.id
+          }"
           (click)="navigateTo(menuItem)"
         >
           <img

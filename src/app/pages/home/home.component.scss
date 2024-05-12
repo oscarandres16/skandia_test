@@ -1,0 +1,102 @@
+.bg-banner {
+  background: linear-gradient(rgba(63, 63, 63, 0), rgba(112, 112, 112, 0.35)),
+    url("../../../assets/imgs/jpgs/pexels-eberhardgross-2347011.jpg");
+  background-position: 0% 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 260px;
+}
+
+.banner {
+  padding: 2rem 10rem;
+  .breadcrumb {
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .title-description {
+    .title {
+      color: #ffffff;
+      margin: 0;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .description {
+      color: #ffffff;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+}
+
+.objetive-card {
+  margin: auto;
+  position: relative;
+  top: -120px;
+  width: 40vw;
+
+  mat-card-content {
+    padding: 0px;
+  }
+
+  .card-content {
+    padding: 20px;
+    height: 200px;
+    background-image: url("../../../assets/imgs/pngs/objetive-card-bg.png");
+    background-size: auto 100px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  .objetive,
+  .objetive-category {
+    margin: 0;
+  }
+
+  .objetive {
+    font-size: 18px;
+  }
+
+  .objetive-category {
+    font-size: 12px;
+  }
+
+  .objetive-detail {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+
+    .value {
+      border-radius: 4px;
+      font-weight: bold;
+      padding: 5px;
+      min-width: 130px;
+    }
+
+    .date {
+      background-color: #a5d7e1;
+    }
+
+    .goal {
+      background-color: #fecd72;
+    }
+
+    .progress {
+      background-color: #95dbb7;
+    }
+  }
+}
+
+.objetives-section {
+  position: relative;
+  top: -100px;
+  padding: 2rem 10rem;
+
+  .important-text {
+    color: #fe9200;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+}

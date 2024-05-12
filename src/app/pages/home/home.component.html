@@ -1,1 +1,94 @@
-<p>home works!</p>
+<div class="w100 default-column gap-20">
+  <div class="w100 default-column bg-banner">
+    <div class="banner default-column justify-center align-center gap-20">
+      <a [routerLink]="['/home']" class="w100 default-row gap-5 breadcrumb">
+        <img
+          src="../../../assets/imgs/svgs/home-2.svg"
+          alt="Inicio"
+          title="Inicio"
+        />
+        Ir al inicio
+      </a>
+      <div
+        class="default-column justify-center align-center gap-10 title-description"
+      >
+        <h1 class="title">¡Tu objetivo ha sido agregado exitosamente!</h1>
+        <p class="description">
+          ¡Te hemos enviado un correo con la notificación.
+        </p>
+      </div>
+    </div>
+  </div>
+  <mat-card class="objetive-card">
+    <mat-card-content>
+      <div class="default-column gap-20 justify-start card-content">
+        <!-- Objetive and review -->
+        <div class="default-row lt-sm-column justify-space-between align-start">
+          <div class="default-column gap-5">
+            <h2 class="objetive">Conocer mi sobrino</h2>
+            <p class="objetive-category">Categoría: Bienestar</p>
+          </div>
+          <div class="default-column gap-10">
+            <a href="#" class="review-objetive"> Revisar objetivo </a>
+          </div>
+        </div>
+        <!-- END Objetive and review -->
+        <!-- Objetive details -->
+        <div class="default-row justify-space-between align-center">
+          <div class="default-column align-center gap-10 objetive-detail">
+            <div class="label">En esta fecha:</div>
+            <div class="value date">Diciembre/2022</div>
+          </div>
+          <div class="default-column align-center gap-10 objetive-detail">
+            <div class="label">Lograrás:</div>
+            <div class="value goal">
+              {{ 6000000 | currency : "USD" : "symbol" : "1.0-0" }}
+            </div>
+          </div>
+          <div class="default-column align-center gap-10 objetive-detail">
+            <div class="label">
+              <img src="../../../assets/imgs/svgs/Icon awesome-star.svg" />
+              Ya cuentas con:
+            </div>
+            <div class="value progress">
+              {{ 0 | currency : "USD" : "symbol" : "1.0-0" }}
+            </div>
+          </div>
+        </div>
+        <!-- END Objetive details -->
+        <!-- Auxiliar Link -->
+        <div class="default-row gap-10">
+          <a href="#" class="default-row gap-5 align-center">
+            <mat-icon>check_circle</mat-icon>
+            ¡Asocia productos para monitorear su progreso!
+          </a>
+        </div>
+        <!-- END Auxiliar Link -->
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div
+    class="objetives-section default-column gap-10 align-center justify-center"
+  >
+    <h2>
+      ¡Vamos por esos
+      <span class="important-text">
+        {{ 6000000 | currency : "USD" : "symbol" : "1.0-0" }}
+      </span>
+      para <span class="important-text">Conocer mi sobrino</span>!
+    </h2>
+    <div class="default-column gap-5 align-center justify-center">
+      <p>
+        ¡A través de tus productos y nuestros rendimientos podremos lograrlo!
+      </p>
+      <div class="default-row gap-5 align-center justify-center">
+        <strong> Asocia tus productos o adquiere uno nuevo. </strong>
+        <img
+          src="../../../assets/imgs/svgs/question.svg"
+          alt="Ayuda"
+          title="Ayuda"
+        />
+      </div>
+    </div>
+  </div>
+</div>

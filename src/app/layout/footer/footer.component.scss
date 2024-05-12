@@ -2,7 +2,6 @@ mat-card {
   box-shadow: 0px 0px 6px #00000029;
   mat-card-content {
     padding: 5vh 10vw;
-    color: #3f3f3f;
     font-size: 14px;
   }
 }
@@ -12,12 +11,7 @@ mat-card {
   }
 
   .footer-tel-link {
-    color: #00c83c;
     text-decoration: none;
-    font-weight: bold;
-    &:hover {
-      color: #fe9200;
-    }
   }
 }
 
@@ -25,6 +19,7 @@ mat-card {
   a {
     color: #3f3f3f;
     font-size: 14px;
+    font-weight: normal;
 
     &:hover {
       color: #00c83c;
