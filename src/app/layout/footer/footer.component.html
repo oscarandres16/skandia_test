@@ -1,1 +1,55 @@
-<p>footer works!</p>
+<mat-card class="w100">
+  <mat-card-content>
+    <div class="default-row justify-space-between align-end gap-20">
+      <!-- Contact Info -->
+      <div class="contact-info-container w100 default-column gap-5">
+        <img class="footer-logo" src="../../../assets/imgs/svgs/Group 123.svg" alt="Skandia" title="Skandia" />
+        <p class="footer-text">© 2019 Skandia</p>
+        <div>
+          PBX:
+          <span>
+            <a class="footer-tel-link" href="tel:+576016584000">658 4000</a>
+            /
+            <a class="footer-tel-link" href="tel:+576014841300">484 1300</a>
+          </span>
+        </div>
+        <div>
+          Línea nacional
+          <span>
+            <a class="footer-tel-link" href="tel:+57018000517526">01 8000 517 526</a>
+          </span>
+        </div>
+        <div>
+          Línea corporativa
+          <span>
+            <a href="tel:+576016584123">658 4123</a>
+          </span>
+        </div>
+        <div>Av. 19 # 109A - 30</div>
+        <div>Bogotá D.C., Colombia</div>
+        <div><strong>Oficinas a nivel nacional</strong></div>
+      </div>
+      <!-- END Contact Info -->
+      <!-- Links -->
+      <div class="links-container w100 default-column gap-5">
+        <div *ngFor="let link of links">
+          <a [href]="link?.url">{{ link?.name }}</a>
+        </div>
+      </div>
+      <!-- END Links -->
+      <!-- Social Media -->
+      <div class="social-media-container default-row justify-space-between align-end gap-20">
+        <div *ngFor="let socialMedia of socialMediaLinks">
+          <a [href]="socialMedia?.url" target="_blank">
+            <img
+              [src]="socialMedia?.iconUrl"
+              [alt]="socialMedia?.name"
+              [title]="socialMedia?.name"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- END Social Media -->
+    </div>
+  </mat-card-content>
+</mat-card>

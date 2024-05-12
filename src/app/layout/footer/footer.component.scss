@@ -1,0 +1,42 @@
+mat-card {
+  box-shadow: 0px 0px 6px #00000029;
+  mat-card-content {
+    padding: 5vh 10vw;
+    color: #3f3f3f;
+    font-size: 14px;
+  }
+}
+.contact-info-container {
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer-tel-link {
+    color: #00c83c;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      color: #fe9200;
+    }
+  }
+}
+
+.links-container {
+  a {
+    color: #3f3f3f;
+    font-size: 14px;
+
+    &:hover {
+      color: #00c83c;
+    }
+  }
+}
+
+.social-media-container {
+  img {
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(50%) sepia(85%)
+        saturate(1279%) hue-rotate(97deg) brightness(96%) contrast(102%);
+    }
+  }
+}
