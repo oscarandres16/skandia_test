@@ -28,11 +28,11 @@
       <div class="default-column gap-20 justify-space-between info-section">
         <p [innerHTML]="data.description"></p>
         <a
-          [href]="data.redirection.url"
+          [href]="data.redirection?.url"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {{ data.redirection.text }}
+          {{ data.redirection?.text }}
         </a>
         <div class="default-column gap-10 details">
           <div
