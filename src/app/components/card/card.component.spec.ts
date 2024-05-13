@@ -11,7 +11,7 @@ describe('CardComponent', () => {
       imports: [CardComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +19,11 @@ describe('CardComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('change event is emitted', () => {
+    spyOn(component.change, 'emit');
+    component.form.controls['checked'].setValue(true);
+    expect(component.change.emit).toHaveBeenCalled();
   });
 });

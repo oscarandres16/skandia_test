@@ -93,7 +93,7 @@ export class HomeComponent implements OnInit {
     };
     this.homeService
       .getProducts()
-      .subscribe((products: { listCard: Product[] }) => {
+      ?.subscribe((products: { listCard: Product[] }) => {
         this.products = products.listCard;
         this.products.push(newProduct);
       });
