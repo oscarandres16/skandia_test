@@ -1,7 +1,5 @@
 <img src="https://oscarandres16.github.io/skandia_test/assets/imgs/svgs/Group%20123.svg" alt="Logo de Skandia" width="200"> 
 
-<br>
-
 # Prueba técnica
 
 Bienvenido al repositorio de la prueba técnica para el Holding financiero Skandia. Este repositorio contiene el código fuente de un sitio aplicativo desarrollado con Angular.
