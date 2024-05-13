@@ -56,17 +56,17 @@ export class FooterComponent implements OnInit {
       {
         name: 'Facebook',
         url: 'https://www.facebook.com/SkandiaCol',
-        iconUrl: '/assets/imgs/svgs/facebookl.svg',
+        iconUrl: '/skandia_test/assets/imgs/svgs/facebookl.svg',
       },
       {
         name: 'Youtube',
         url: 'https://www.youtube.com/channel/UCBkvnW9tFpaNZaNe8zbxPyg',
-        iconUrl: '/assets/imgs/svgs/youtube.svg',
+        iconUrl: '/skandia_test/assets/imgs/svgs/youtube.svg',
       },
       {
         name: 'Twitter',
         url: 'https://twitter.com/SkandiaCol',
-        iconUrl: '/assets/imgs/svgs/twitter.svg',
+        iconUrl: '/skandia_test/assets/imgs/svgs/twitter.svg',
       },
     ];
   }
