@@ -107,6 +107,7 @@ export class NavbarComponent implements OnInit {
    */
   public navigateTo(menuItem: MenuItem) {
     this.selectedMenuItem = menuItem;
+    this.sidenavExpanded = false;
     this.router.navigate([menuItem.route]);
   }
 }
