@@ -110,6 +110,7 @@ export class HomeComponent implements OnInit {
    * Obtiene los productos.
    */
   private getProducts(): void {
+    this.products = [];
     const newProduct: Product = {
       nameProduct: '',
       numberProduct: '',
