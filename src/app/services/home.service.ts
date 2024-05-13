@@ -14,12 +14,11 @@ export class HomeService {
   getProducts(): Observable<{ listCard: Product[] }> {
     return this.http
       .get<{ listCard: Product[] }>(
-        'https://62e152f8fa99731d75d44571.mockapi.io/api/v1/test-front-end-skandia/cards'
+        '/test-front-end-skandia/cards'
       )
       .pipe(
         tap((products) => {
           if (products?.listCard?.length === 0) {
-            console.log('No products found');
             return;
           } else {
             products.listCard.map((product) => {
