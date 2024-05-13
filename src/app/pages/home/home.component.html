@@ -23,7 +23,9 @@
     <mat-card-content>
       <div class="default-column gap-20 justify-start card-content">
         <!-- Objetive and review -->
-        <div class="default-row lt-sm-column justify-space-between align-start gap-10">
+        <div
+          class="default-row lt-sm-column justify-space-between align-start gap-10"
+        >
           <div class="default-column gap-5">
             <h2 class="objetive">Conocer mi sobrino</h2>
             <p class="objetive-category">Categoría: Bienestar</p>
@@ -34,7 +36,9 @@
         </div>
         <!-- END Objetive and review -->
         <!-- Objetive details -->
-        <div class="default-row gap-20 lt-sm-column justify-space-evenly align-center">
+        <div
+          class="default-row gap-20 lt-sm-column justify-space-evenly align-center"
+        >
           <div class="default-column align-center gap-10 objetive-detail">
             <div class="label">En esta fecha:</div>
             <div class="value date">Diciembre/2022</div>
@@ -82,7 +86,7 @@
       <p>
         ¡A través de tus productos y nuestros rendimientos podremos lograrlo!
       </p>
-      <div class="default-row gap-5 align-center justify-center">
+      <div class="default-row gap-5 align-center justify-center lt-sm-column">
         <strong> Asocia tus productos o adquiere uno nuevo. </strong>
         <img
           src="../../../assets/imgs/svgs/question.svg"
@@ -94,26 +98,16 @@
     <!-- END Text Section -->
     <!-- Products -->
     <div class="w100 default-row gap-20 align-center">
-      <button
-        mat-icon-button
-        color="primary"
-        class="slider-button prev-slider-button"
-        (click)="prevSlide()"
-      >
-        <mat-icon>arrow_forward_ios</mat-icon>
-      </button>
-      <div id="cards-container" class="w100 default-row gap-20 cards-container">
-        <app-card *ngFor="let product of products" [data]="product"></app-card>
-      </div>
-      <button
-        mat-icon-button
-        color="primary"
-        class="slider-button next-slider-button"
-        (click)="nextSlide()"
-        [disabled]="disableNextSlide()"
-      >
-        <mat-icon>arrow_forward_ios</mat-icon>
-      </button>
+      <owl-carousel-o [options]="customOptions" class="w100">
+        <ng-template
+          carouselSlide
+          class="w100"
+          *ngFor="let product of products"
+          [id]="product.balanceProduct"
+        >
+          <app-card [data]="product"> </app-card>
+        </ng-template>
+      </owl-carousel-o>
     </div>
     <!-- END Products -->
     <!-- Associate Button -->
