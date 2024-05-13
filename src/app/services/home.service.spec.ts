@@ -1,4 +1,7 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { HomeService } from './home.service';
 
@@ -9,7 +12,7 @@ describe('HomeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [HomeService]
+      providers: [HomeService],
     });
     service = TestBed.inject(HomeService);
     httpMock = TestBed.inject(HttpTestingController);
@@ -23,12 +26,12 @@ describe('HomeService', () => {
     const mockProductsResponse = {
       listCard: [
         { id: 1, name: 'Product 1' },
-        { id: 2, name: 'Product 2' }
-      ]
+        { id: 2, name: 'Product 2' },
+      ],
     };
 
     // Configura la respuesta simulada de la llamada HTTP
-    service.getProducts().subscribe(products => {
+    service.getProducts().subscribe((products) => {
       expect(products.listCard.length).toBe(2);
       expect(products.listCard[0].productType).toBeDefined();
       expect(products.listCard[1].productType).toBeDefined();
@@ -41,11 +44,11 @@ describe('HomeService', () => {
 
   it('should handle empty products list', () => {
     const mockEmptyProductsResponse = {
-      listCard: []
+      listCard: [],
     };
 
     // Configura la respuesta simulada de la llamada HTTP
-    service.getProducts().subscribe(products => {
+    service.getProducts().subscribe((products) => {
       expect(products.listCard.length).toBe(0);
     });
 
