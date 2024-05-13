@@ -1,3 +1,12 @@
+.bg-home {
+  background: url("../../../assets/imgs/pngs/iStock-480003814.png");
+  background-position: 0% 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
 .bg-banner {
   background: linear-gradient(rgba(63, 63, 63, 0), rgba(112, 112, 112, 0.35)),
     url("../../../assets/imgs/jpgs/pexels-eberhardgross-2347011.jpg");
@@ -6,35 +15,17 @@
   background-repeat: no-repeat;
   height: 260px;
   transition: all 0.5s ease;
-
-  @media screen and (max-width: 866px) {
-    height: 290px;
-  }
-  @media screen and (max-width: 714px) {
-    height: 300px;
-  }
-  @media screen and (max-width: 641px) {
-    height: 320px;
-  }
-  @media screen and (max-width: 552px) {
-    height: 340px;
-  }
-  @media screen and (max-width: 599px) {
-    height: 350px;
-  }
-  @media screen and (max-width: 479px) {
-    height: 360px;
-  }
-  @media screen and (max-width: 445px) {
-    height: 380px;
-  }
 }
 
 .banner {
   padding: 2rem 10rem;
+  @media screen and (max-width: 1279px) {
+    padding: 2rem 2rem;
+  }
   .breadcrumb {
     color: #ffffff;
     font-weight: 500;
+    width: max-content;
   }
   .title-description {
     text-align: center;
@@ -60,6 +51,15 @@
 
   @media screen and (max-width: 1279px) {
     width: 80vw;
+  }
+  @media screen and (max-width: 599px) {
+    top: -100px;
+  }
+  @media screen and (max-width: 479px) {
+    top: -80px;
+  }
+  @media screen and (max-width: 445px) {
+    top: -60px;
   }
 
   mat-card-content {
@@ -119,13 +119,22 @@
 
 .objetives-section {
   position: relative;
-  top: -140px;
+  top: -120px;
   padding: 2rem 10rem;
-  padding-bottom: 0px;
   margin-bottom: -120px;
 
   @media screen and (max-width: 1279px) {
     padding: 2rem 1rem;
+  }
+  @media screen and (max-width: 599px) {
+    top: -100px;
+    margin-bottom: -60px;
+  }
+  @media screen and (max-width: 479px) {
+    top: -80px;
+  }
+  @media screen and (max-width: 445px) {
+    top: -60px;
   }
 
   h2,

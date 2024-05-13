@@ -33,13 +33,13 @@ export class HomeComponent implements OnInit {
     autoWidth: true,
     responsive: {
       0: {
-        items: 1,
+        items: 0.75,
       },
       350: {
         items: 1,
       },
       400: {
-        items: 1.3,
+        items: 1.1,
       },
       600: {
         items: 1.5,
