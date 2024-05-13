@@ -51,7 +51,7 @@ export class ProductsService {
       {
         code: 'AHORRO123',
         productTypeLabel: 'Ahorro e inversión',
-        image: '/assets/imgs/pngs/new-product-banner.png',
+        image: '/skandia_test/assets/imgs/pngs/new-product-banner.png',
         description:
           'Fondo de inversión Colectiva, <strong> la acción para potenciar tu capital y hacer real tu objetivo! </strong>',
         redirection: {
@@ -60,12 +60,12 @@ export class ProductsService {
         },
         helpTexts: [
           {
-            helpIcon: '/assets/imgs/pngs/world.png',
+            helpIcon: '/skandia_test/assets/imgs/pngs/world.png',
             helpText:
               'Rentabilidades mínimas del <strong>3% anuales</strong>',
           },
           {
-            helpIcon: '/assets/imgs/pngs/profile.png',
+            helpIcon: '/skandia_test/assets/imgs/pngs/profile.png',
             helpText:
               '<strong>4000 clientes</strong> confían en este producto',
           },
@@ -75,7 +75,7 @@ export class ProductsService {
       {
         code: 'CREDITO123',
         productTypeLabel: 'Crédito de vivienda',
-        image: '/assets/imgs/pngs/new-product-banner.png',
+        image: '/skandia_test/assets/imgs/pngs/new-product-banner.png',
         description:
           '¡Un crédito libre de inversión, <strong> usalo para hacer real eso que tanto quieres! </strong>',
         redirection: {
@@ -84,12 +84,12 @@ export class ProductsService {
         },
         helpTexts: [
           {
-            helpIcon: '/assets/imgs/pngs/world.png',
+            helpIcon: '/skandia_test/assets/imgs/pngs/world.png',
             helpText:
               'Rentabilidades mínimas del <strong>3% anuales</strong>',
           },
           {
-            helpIcon: '/assets/imgs/pngs/profile.png',
+            helpIcon: '/skandia_test/assets/imgs/pngs/profile.png',
             helpText:
               '<strong>4000 clientes</strong> confían en este producto',
           },
