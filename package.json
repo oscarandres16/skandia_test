@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "deploy:gh": "ng deploy --base-href=https://oscarandres16.github.io/skandia_test/",
     "test": "ng test",
     "test:coverage": "ng test --code-coverage",
     "compodoc:build": "compodoc -p tsconfig.doc.json",
