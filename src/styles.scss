@@ -2,17 +2,89 @@
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
 // Plus imports for other components in your app.
+@import "variables";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+// Genera la paleta de colores primarios
+$primary-palette: (
+  50: mix($white, $green, 5%),
+  100: mix($white, $green, 10%),
+  200: mix($white, $green, 20%),
+  300: mix($white, $green, 30%),
+  400: mix($white, $green, 40%),
+  500: $green,
+  // Color base
+  600: mix($dark-gray, $green, 10%),
+  700: mix($dark-gray, $green, 20%),
+  800: mix($dark-gray, $green, 30%),
+  900: mix($dark-gray, $green, 40%),
+  A100: mix($white, $green, 5%),
+  A200: mix($white, $green, 10%),
+  A400: mix($white, $green, 20%),
+  A700: mix($white, $green, 30%),
+  contrast: (
+    50: $dark-gray,
+    100: $dark-gray,
+    200: $dark-gray,
+    300: $dark-gray,
+    400: $dark-gray,
+    500: $white,
+    600: $white,
+    700: $white,
+    800: $white,
+    900: $white,
+    A100: $dark-gray,
+    A200: $dark-gray,
+    A400: $dark-gray,
+    A700: $white,
+  ),
+);
+
+$secondary-palette: (
+  50: mix($white, $orange, 5%),
+  100: mix($white, $orange, 10%),
+  200: mix($white, $orange, 20%),
+  300: mix($white, $orange, 30%),
+  400: mix($white, $orange, 40%),
+  500: $orange,
+  // Color base
+  600: mix($dark-gray, $orange, 10%),
+  700: mix($dark-gray, $orange, 20%),
+  800: mix($dark-gray, $orange, 30%),
+  900: mix($dark-gray, $orange, 40%),
+  A100: mix($white, $orange, 5%),
+  A200: mix($white, $orange, 10%),
+  A400: mix($white, $orange, 20%),
+  A700: mix($white, $orange, 30%),
+  contrast: (
+    50: $dark-gray,
+    100: $dark-gray,
+    200: $dark-gray,
+    300: $dark-gray,
+    400: $dark-gray,
+    500: $white,
+    600: $white,
+    700: $white,
+    800: $white,
+    900: $white,
+    A100: $dark-gray,
+    A200: $dark-gray,
+    A400: $dark-gray,
+    A700: $white,
+  ),
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$skandia-primary: mat.define-palette(mat.$indigo-palette);
-$skandia-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$skandia-primary: mat.define-palette($primary-palette);
+$skandia-accent: mat.define-palette($secondary-palette);
 
 // The warn palette is optional (defaults to red).
 $skandia-warn: mat.define-palette(mat.$red-palette);
@@ -35,9 +107,6 @@ $skandia-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($skandia-theme);
-@import "variables";
-@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 /* You can add global styles to this file, and also import other style files */
 
