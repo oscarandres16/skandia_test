@@ -1157,3 +1157,50 @@ a {
     color: #fe9200;
   }
 }
+
+.important-text {
+  color: #fe9200;
+}
+
+.primary-button {
+  border-radius: 25px;
+  background-color: #00c83c;
+  border: 1px solid #00c83c;
+  width: 260px;
+  height: 50px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.1s ease;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #00c83c;
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    background-color: #e2e2e2;
+    color: #3f3f3f;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+  background-color: #95dbb7;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a4d071;
+}

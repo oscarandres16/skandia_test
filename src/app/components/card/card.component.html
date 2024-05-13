@@ -1,5 +1,6 @@
 <mat-card [class]="cardClass">
-  <mat-card-content>
+  <!-- Product card -->
+  <mat-card-content *ngIf="data?.productType !== 'new'">
     <div class="default-column gap-20 justify-space-between">
       <div class="w100 default-row justify-end">
         <form *ngIf="form" [formGroup]="form">
@@ -27,10 +28,30 @@
       <div class="default-column gap-5 hint-zone justifu-center align-center">
         <img [src]="iconUrl" />
         <p>
-          ¡Cuentas con $2.120.000 para tu objetivo! Te recomendamos aportar
-          $388.000 mensuales para lograrlo en diciembre del 2022.
+          {{ data.detaildProduct }}! Te recomendamos aportar
+          <span class="important-text">{{
+            388000 | currency : "USD" : "symbol" : "1.0-0"
+          }}</span>
+          mensuales para lograrlo en diciembre del 2022.
         </p>
       </div>
     </div>
   </mat-card-content>
+  <!-- END Product card -->
+  <!-- New product card -->
+  <mat-card-content *ngIf="data?.productType === 'new'" class="new-product">
+    <div class="new-card default-column gap-20 justify-space-between">
+      <div class="default-row justify-end">
+        <div class="recommended-label">Producto recomendado</div>
+      </div>
+      <h4>
+        ¡Conoce nuevos productos de ahorro e inversión para
+        <span class="important-text">Conocer sobrino</span>!
+      </h4>
+      <div>
+        <button class="primary-button">Explora ahora</button>
+      </div>
+    </div>
+  </mat-card-content>
+  <!-- END New product card -->
 </mat-card>

@@ -4,5 +4,5 @@ export interface Product {
   balanceProduct: string;
   detaildProduct: string;
   selected?: boolean;
-  productType?: 'ahorro' | 'inversion' | 'credito';
+  productType?: 'ahorro' | 'inversion' | 'credito' | 'new';
 }
