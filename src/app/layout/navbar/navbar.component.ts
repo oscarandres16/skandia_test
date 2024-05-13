@@ -63,22 +63,40 @@ export class NavbarComponent implements OnInit {
     this.menuItems = [
       {
         id: 1,
-        title: 'Home',
+        title: 'Inicio',
         iconUrl: '/assets/imgs/svgs/home.svg',
         route: '/',
       },
-      // {
-      //   id: 2,
-      //   title: 'About',
-      //   iconUrl: 'info',
-      //   route: '/about',
-      // },
-      // {
-      //   id: 3,
-      //   title: 'Contact',
-      //   iconUrl: 'contact',
-      //   route: '/contact',
-      // },
+      {
+        id: 2,
+        title: 'Contratos',
+        iconUrl: '/assets/imgs/svgs/hoja1.svg',
+        route: '#',
+      },
+      {
+        id: 3,
+        title: 'Acciones',
+        iconUrl: '/assets/imgs/svgs/Tool.svg',
+        route: '#',
+      },
+      {
+        id:4,
+        title: 'Objetivos',
+        iconUrl: '/assets/imgs/svgs/star.svg',
+        route: '#',
+      },
+      {
+        id: 5,
+        title: 'Herramientas',
+        iconUrl: '/assets/imgs/svgs/money.svg',
+        route: '#',
+      },
+      {
+        id: 6,
+        title: 'Servicio al cliente',
+        iconUrl: '/assets/imgs/svgs/talk2.svg',
+        route: '#',
+      }
     ];
     this.selectedMenuItem = this.menuItems[0];
   }
