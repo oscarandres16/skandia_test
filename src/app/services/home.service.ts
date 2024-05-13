@@ -13,9 +13,7 @@ export class HomeService {
 
   getProducts(): Observable<{ listCard: Product[] }> {
     return this.http
-      .get<{ listCard: Product[] }>(
-        '/test-front-end-skandia/cards'
-      )
+      .get<{ listCard: Product[] }>('/test-front-end-skandia/cards')
       .pipe(
         tap((products) => {
           if (products?.listCard?.length === 0) {
