@@ -5,6 +5,9 @@ import { NewProductCardInfo } from '../../interfaces/product.interface';
 import { ProductsService } from '../../services/products.service';
 import { CardWithImageComponent } from '../card-with-image/card-with-image.component';
 
+/**
+ * Componente que muestra la sección de productos nuevos.
+ */
 @Component({
   selector: 'app-new-product-section',
   standalone: true,
@@ -19,8 +22,8 @@ export class NewProductSectionComponent implements OnInit {
   public customOptions: OwlOptions = {
     loop: true,
     dots: false,
-    // fluidSpeed: true,
-    // autoplay: true,
+    fluidSpeed: true,
+    autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsive: {
@@ -34,14 +37,27 @@ export class NewProductSectionComponent implements OnInit {
     nav: true,
     navText: ['<', '>'],
   };
+  /**
+   * Lista de productos nuevos.
+   */
   public newProducts: NewProductCardInfo[] = [];
 
+  /**
+   * Constructor del componente.
+   * @param productsService - Servicio de productos.
+   */
   constructor(private productsService: ProductsService) {}
 
+  /**
+   * Inicializa el componente.
+   */
   ngOnInit(): void {
     this.getNewProducts();
   }
 
+  /**
+   * Obtiene los productos nuevos.
+   */
   private getNewProducts(): void {
     this.newProducts = [];
     this.productsService.getNewProducts().subscribe((newProducts) => {

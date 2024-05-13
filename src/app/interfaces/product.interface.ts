@@ -66,6 +66,9 @@ export interface NewProductCardInfo {
   productType?: 'ahorro' | 'inversion' | 'credito' | 'new';
 }
 
+/**
+ * Redirección
+ */
 export interface Redirection {
   /**
    * Texto del botón

@@ -4,6 +4,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NewProductCardInfo } from '../../interfaces/product.interface';
 
+/**
+ * Componente que muestra una tarjeta con la información de un producto nuevo.
+ */
 @Component({
   selector: 'app-card-with-image',
   standalone: true,

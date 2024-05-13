@@ -43,6 +43,9 @@ export class ProductsService {
       );
   }
 
+  /**
+   * Obtiene los productos nuevos.
+   */
   public getNewProducts(): Observable<NewProductCardInfo[]> {
     const fakeNewProducts: NewProductCardInfo[] = [
       {
