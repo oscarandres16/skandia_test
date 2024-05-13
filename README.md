@@ -11,8 +11,14 @@ Para ejecutar la aplicación en tu entorno local, sigue estos pasos:
 1. Clona este repositorio a tu máquina local.
 2. Abre una terminal en la carpeta del proyecto.
 3. Ejecuta el siguiente comando para instalar las dependencias:
+`npm i` o `yarn install`
 4. Una vez instaladas las dependencias, inicia la aplicación con:
+`ng serve` o `npm run start`
 5. Abre tu navegador web y ve a `http://localhost:4200/` para ver la aplicación en acción.
+
+## Si no desea ejecutar en local
+
+La aplicación se encuentra desplegada en el siguiente enlace ➡️ [Skandia Test App 🌐](https://oscarandres16.github.io/skandia_test/home)
 
 ## Tecnologías Utilizadas
 
@@ -20,6 +26,7 @@ Para ejecutar la aplicación en tu entorno local, sigue estos pasos:
 - **Angular Material:** Se utilizó la última versión de Angular Material (m3). [![Angular Material](https://img.shields.io/badge/Angular_Material-m3-blue.svg)](https://material.angular.io/)
 - **Karma y Jasmine:** Las pruebas unitarias se realizaron con Karma y Jasmine. [![Karma](https://img.shields.io/badge/Karma-Test%20Runner-red.svg)](https://karma-runner.github.io/latest/index.html) [![Jasmine](https://img.shields.io/badge/Jasmine-Test%20Framework-purple.svg)](https://jasmine.github.io/)
 - **Compodoc:** La herramienta utilizada para generar la documentación es Compodoc. [![Compodoc](https://img.shields.io/badge/Compodoc-Documentation%20Generator-orange.svg)](https://compodoc.app/)
+- **angular-cli-ghpages:** La aplicación se encuentra desplegada haciendo uso de GitHub pages. [![Angular CLI GitHub Pages](https://img.shields.io/badge/Angular_CLI_GitHub_Pages-Deployed-brightgreen.svg)](https://github.com/angular/angular-cli-ghpages)
 
 ## Funcionalidades Adicionales
 
@@ -35,5 +42,6 @@ Para ejecutar la aplicación en tu entorno local, sigue estos pasos:
 - <img src="https://avatars.githubusercontent.com/u/3284117?s=280&v=4" alt="Compodoc" width="20"> **Karma:** [Karma](https://karma-runner.github.io/latest/index.html)
 - <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Logo_jasmine.svg/1200px-Logo_jasmine.svg.png" alt="Compodoc" width="20"> **Jasmine:** [Jasmine](https://jasmine.github.io/)
 - <img src="https://avatars3.githubusercontent.com/u/23202313" alt="Compodoc" width="20"> **Compodoc:** [Compodoc](https://compodoc.app/)
+- **Aplicación Desplegada:** [Skandia Test App](https://oscarandres16.github.io/skandia_test/home)
 
 ¡Diviértete explorando la aplicación! 😊🚀
