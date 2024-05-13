@@ -55,6 +55,6 @@ export class CardWithImageComponent implements OnInit {
    */
   ngOnInit(): void {
     this.cardClass =
-      this.productTypeClass[this.data.productType || 'new']?.card || '';
+      this.productTypeClass[this.data.productType || 'new']?.card;
   }
 }

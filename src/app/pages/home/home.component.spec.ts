@@ -37,6 +37,13 @@ describe('HomeComponent', () => {
         balanceProduct: '50000',
         detaildProduct: 'Ya tienes un 1% de tu objetivo ',
       },
+      {
+        nameProduct: '',
+        numberProduct: '',
+        balanceProduct: '',
+        detaildProduct: '',
+        productType: 'new',
+      },
     ],
   };
 
@@ -53,7 +60,9 @@ describe('HomeComponent', () => {
       providers: [{ provide: ProductsService, useValue: spy }],
     }).compileComponents();
 
-    productsService = TestBed.inject(ProductsService) as jasmine.SpyObj<ProductsService>;
+    productsService = TestBed.inject(
+      ProductsService
+    ) as jasmine.SpyObj<ProductsService>;
 
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
@@ -81,5 +90,12 @@ describe('HomeComponent', () => {
     productsService.getProducts.and.returnValue(of(response));
     component['getProducts']();
     expect(component.isAsociarButtonDisabled()).toBeFalse();
+  });
+
+  it('new product is showed', () => {
+    productsService.getProducts.and.returnValue(of(response));
+    component['getProducts']();
+    component.cardChange(true, component.products.length - 1);
+    expect(component.showNewProduct).toBeTruthy();
   });
 });

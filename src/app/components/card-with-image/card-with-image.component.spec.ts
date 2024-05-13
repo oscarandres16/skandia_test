@@ -11,7 +11,7 @@ describe('CardWithImageComponent', () => {
       imports: [CardWithImageComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(CardWithImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
