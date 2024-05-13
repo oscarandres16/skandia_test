@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="default-column gap-5 hint-zone justifu-center align-center">
-        <img [src]="iconUrl" class="icon-img"/>
+        <img [src]="iconUrl" class="icon-img" />
         <p>
           {{ data.detaildProduct }}! Te recomendamos aportar
           <span class="important-text">{{
@@ -49,7 +49,9 @@
         <span class="important-text">Conocer sobrino</span>!
       </h4>
       <div>
-        <button class="primary-button">Explora ahora</button>
+        <button class="primary-button" (click)="showNewProductSection()">
+          Explora ahora
+        </button>
       </div>
     </div>
   </mat-card-content>

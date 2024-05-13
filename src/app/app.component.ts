@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
   /**
    * Constructor del componente.
-   * @param homeService - Servicio de la página de inicio
+   * @param productsService - Servicio de la página de inicio
    */
   constructor(private globalConfigService: GlobalConfigService) {}
 

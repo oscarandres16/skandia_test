@@ -4,13 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { Product } from '../../interfaces/product.interface';
-import { HomeService } from '../../services/home.service';
+import { ProductsService } from '../../services/products.service';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  let homeService: jasmine.SpyObj<HomeService>;
+  let productsService: jasmine.SpyObj<ProductsService>;
   const response: { listCard: Product[] } = {
     listCard: [
       {
@@ -37,11 +37,18 @@ describe('HomeComponent', () => {
         balanceProduct: '50000',
         detaildProduct: 'Ya tienes un 1% de tu objetivo ',
       },
+      {
+        nameProduct: '',
+        numberProduct: '',
+        balanceProduct: '',
+        detaildProduct: '',
+        productType: 'new',
+      },
     ],
   };
 
   beforeEach(async () => {
-    const spy = jasmine.createSpyObj('HomeService', ['getProducts']);
+    const spy = jasmine.createSpyObj('ProductsService', ['getProducts']);
 
     await TestBed.configureTestingModule({
       imports: [
@@ -50,10 +57,12 @@ describe('HomeComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule,
       ],
-      providers: [{ provide: HomeService, useValue: spy }],
+      providers: [{ provide: ProductsService, useValue: spy }],
     }).compileComponents();
 
-    homeService = TestBed.inject(HomeService) as jasmine.SpyObj<HomeService>;
+    productsService = TestBed.inject(
+      ProductsService
+    ) as jasmine.SpyObj<ProductsService>;
 
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
@@ -65,21 +74,28 @@ describe('HomeComponent', () => {
   });
 
   it('should call getProducts', () => {
-    homeService.getProducts.and.returnValue(of(response));
+    productsService.getProducts.and.returnValue(of(response));
     component['getProducts']();
-    expect(homeService.getProducts).toHaveBeenCalled();
+    expect(productsService.getProducts).toHaveBeenCalled();
   });
 
   it('card was selected', () => {
-    homeService.getProducts.and.returnValue(of(response));
+    productsService.getProducts.and.returnValue(of(response));
     component['getProducts']();
     component.cardChange(true, 0);
     expect(component.products[0].selected).toBeTruthy();
   });
 
   it('associat button is disabled', () => {
-    homeService.getProducts.and.returnValue(of(response));
+    productsService.getProducts.and.returnValue(of(response));
     component['getProducts']();
     expect(component.isAsociarButtonDisabled()).toBeFalse();
+  });
+
+  it('new product is showed', () => {
+    productsService.getProducts.and.returnValue(of(response));
+    component['getProducts']();
+    component.cardChange(true, component.products.length - 1);
+    expect(component.showNewProduct).toBeTruthy();
   });
 });

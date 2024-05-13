@@ -26,4 +26,10 @@ describe('CardComponent', () => {
     component.form.controls['checked'].setValue(true);
     expect(component.change.emit).toHaveBeenCalled();
   });
+
+  it('showNewProductSection method', () => {
+    spyOn(component.change, 'emit');
+    component.showNewProductSection();
+    expect(component.change.emit).toHaveBeenCalled();
+  });
 });
