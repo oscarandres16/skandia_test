@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 mat-card {
   width: 352px;
   min-height: 402px;
@@ -8,37 +10,39 @@ mat-card {
   border-bottom: 5px solid;
 
   &:hover {
-    -webkit-box-shadow: 0px -2px 10px -3px #00c83c;
-    -moz-box-shadow: 0px -2px 10px -3px #00c83c;
-    box-shadow: 0px -2px 10px -3px #00c83c;
+    -webkit-box-shadow: 0px -2px 10px -3px $green;
+    -moz-box-shadow: 0px -2px 10px -3px $green;
+    box-shadow: 0px -2px 10px -3px $green;
   }
 
   h4,
   p {
     margin: 0;
     font-size: 18px;
+    font-family: "Montserrat", sans-serif;
   }
 
   &.primary {
-    border-color: #a4d071;
+    border-color: $light-green-2;
   }
   &.secondary {
-    border-color: #a5d7e1;
+    border-color: $light-blue;
   }
   &.tertiary {
-    border-color: #63aabc;
+    border-color: $blue;
   }
   &.new {
-    border-color: #ff9460;
+    border-color: $dark-orange;
   }
 
   .product-balance {
-    color: #00c83c;
+    color: $green;
+    font-family: "Montserrat", sans-serif;
   }
 
   .hint-zone {
     margin-top: 20px;
-    background-color: #ededed;
+    background-color: $light-gray-3;
     border-radius: 1px;
 
     img {
@@ -53,6 +57,8 @@ mat-card {
       text-align: center;
       position: relative;
       top: -20px;
+      font-size: 12px;
+      font-family: "Verdana", sans-serif;
     }
   }
 
@@ -84,7 +90,7 @@ mat-card {
 
     .recommended-label {
       background-color: #fe9201;
-      color: #ffffff;
+      color: $white;
       font-weight: 600;
       font-size: 10px;
       padding: 5px;

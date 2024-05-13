@@ -36,8 +36,8 @@ $skandia-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($skandia-theme);
 @import "variables";
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -60,7 +60,19 @@ body {
 }
 
 * {
-  color: #3f3f3f;
+  color: $dark-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Monserrat", sans-serif !important;
+}
+
+p {
+  font-family: "Verdana", sans-serif !important;
 }
 
 .default-row {
@@ -1149,29 +1161,29 @@ body {
 }
 
 a {
-  color: #00c83c;
+  color: $green;
   text-decoration: underline;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   font-size: 14px;
 
   &:hover {
-    color: #fe9200;
+    color: $orange;
   }
 }
 
 .important-text {
-  color: #fe9200;
+  color: $orange;
 }
 
 .primary-button {
   border-radius: 25px;
-  background-color: #00c83c;
-  border: 1px solid #00c83c;
+  background-color: $green;
+  border: 1px solid $green;
   width: 260px;
   height: 50px;
   padding: 10px;
-  color: #ffffff;
+  color: $white;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
@@ -1179,14 +1191,17 @@ a {
   transition: all 0.1s ease;
 
   &:hover {
-    background-color: #ffffff;
-    color: #00c83c;
+    background-color: $white;
+    color: $green;
     text-decoration: underline;
   }
 
   &:disabled {
-    background-color: #e2e2e2;
-    color: #3f3f3f;
+    border: 1px solid $light-gray-2;
+    text-decoration: none;
+    background-color: $light-gray-2;
+    color: $dark-gray;
+    cursor: default;
   }
 }
 
@@ -1194,7 +1209,7 @@ a {
 ::-webkit-scrollbar {
   width: 5px;
   height: 0px;
-  background-color: #95dbb7;
+  background-color: $light-green;
 }
 
 /* Track */
@@ -1204,5 +1219,5 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #a4d071;
+  background: $light-green-2;
 }

@@ -1,5 +1,7 @@
+@import "../../../variables.scss";
+
 mat-card {
-  box-shadow: 0px 0px 6px #00000029;
+  box-shadow: 0px 0px 6px $light-gray;
   mat-card-content {
     padding: 5vh 10vw;
     font-size: 14px;
@@ -17,12 +19,12 @@ mat-card {
 
 .links-container {
   a {
-    color: #3f3f3f;
+    color: $dark-gray;
     font-size: 14px;
     font-weight: normal;
 
     &:hover {
-      color: #00c83c;
+      color: $green;
     }
   }
   @media screen and (max-width: 599px) {

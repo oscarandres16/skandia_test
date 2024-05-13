@@ -1,12 +1,14 @@
+@import '../../../variables.scss';
+
 mat-toolbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e2e2;
+  background-color: $white;
+  border-bottom: 1px solid $light-gray-2;
 }
 
 mat-divider {
   width: 2px;
   height: 28px;
-  background-color: #3f3f3f;
+  background-color: $dark-gray;
 
   @media screen and (max-width: 599px) {
     display: none;
@@ -19,7 +21,7 @@ mat-divider {
 }
 
 mat-icon {
-  color: #00c83c;
+  color: $green;
 }
 
 .navbar-container {
@@ -64,7 +66,7 @@ mat-icon {
 }
 
 mat-drawer {
-  background-color: #e2e2e2;
+  background-color: $light-gray-2;
 
   mat-nav-list,
   mat-list-item {
@@ -91,8 +93,8 @@ mat-drawer {
     height: 50px;
     padding: 0px 15px;
     transition: all 0.1s ease 0s;
-    background-color: #00c83c;
-    color: #ffffff;
+    background-color: $green;
+    color: $white;
     font-weight: 500;
     img {
       width: 16px;
@@ -102,7 +104,7 @@ mat-drawer {
     }
     span {
       width: 180px;
-      color: #ffffff;
+      color: $white;
     }
   }
 }

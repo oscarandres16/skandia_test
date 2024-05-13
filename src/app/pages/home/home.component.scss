@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .bg-home {
   background: url("../../../assets/imgs/pngs/iStock-480003814.png");
   background-position: 0% 15%;
@@ -23,20 +25,20 @@
     padding: 2rem 2rem;
   }
   .breadcrumb {
-    color: #ffffff;
+    color: $white;
     font-weight: 500;
     width: max-content;
   }
   .title-description {
     text-align: center;
     .title {
-      color: #ffffff;
+      color: $white;
       margin: 0;
       font-weight: bold;
       font-size: 25px;
     }
     .description {
-      color: #ffffff;
+      color: $white;
       font-size: 16px;
       margin: 0;
     }
@@ -104,15 +106,15 @@
     }
 
     .date {
-      background-color: #a5d7e1;
+      background-color: $light-blue;
     }
 
     .goal {
-      background-color: #fecd72;
+      background-color: $light-orange;
     }
 
     .progress {
-      background-color: #95dbb7;
+      background-color: $light-green;
     }
   }
 }
@@ -154,6 +156,7 @@
 ::ng-deep .owl-carousel .owl-stage {
   display: flex !important;
   flex-direction: row !important;
+  padding: 5px;
 }
 
 ::ng-deep .owl-nav {
@@ -166,7 +169,7 @@
   .owl-prev,
   .owl-next {
     position: absolute;
-    background-color: #00c83c !important;
+    background-color: $green !important;
     width: 40px !important;
     height: 40px !important;
     display: flex !important;

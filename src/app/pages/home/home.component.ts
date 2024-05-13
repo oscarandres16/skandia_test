@@ -1,5 +1,6 @@
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,6 +15,8 @@ import { HomeService } from '../../services/home.service';
   imports: [
     CommonModule,
     CarouselModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     MatButtonModule,
     MatCardModule,
@@ -27,10 +30,14 @@ import { HomeService } from '../../services/home.service';
 export class HomeComponent implements OnInit {
   public products: Product[] = [];
   public customOptions: OwlOptions = {
+    loop: true,
     mouseDrag: true,
     dots: false,
     fluidSpeed: true,
     autoWidth: true,
+    // autoplay: true,
+    // autoplayTimeout: 3000,
+    // autoplayHoverPause: true,
     responsive: {
       0: {
         items: 0.75,
@@ -64,12 +71,11 @@ export class HomeComponent implements OnInit {
       },
       1800: {
         items: 5,
-      }
+      },
     },
     nav: true,
     navText: ['<', '>'],
   };
-  private currentSlide: number = 0;
 
   constructor(private homeService: HomeService) {}
 
@@ -93,29 +99,11 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  prevSlide() {
-    const cardsContainer = document.querySelector(
-      '#cards-container'
-    ) as HTMLElement;
-    if (cardsContainer) {
-      if (this.currentSlide === 0) return;
-      cardsContainer.style.transform += `translateX(310px)`;
-      this.currentSlide--;
-    }
+  cardChange($event: any, index: number) {
+    this.products[index].selected = $event;
   }
 
-  nextSlide() {
-    const cardsContainer = document.querySelector(
-      '#cards-container'
-    ) as HTMLElement;
-    if (cardsContainer) {
-      // if (this.currentSlide === this.products.length - 4) return;
-      cardsContainer.style.transform += `translateX(-310px)`;
-      this.currentSlide++;
-    }
-  }
-
-  disableNextSlide(): boolean {
-    return this.currentSlide === this.products.length - 3;
+  isAsociarButtonDisabled(): boolean {
+    return this.products.filter((product) => product.selected).length === 0;
   }
 }

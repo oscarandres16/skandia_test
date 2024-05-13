@@ -104,17 +104,18 @@
         <ng-template
           carouselSlide
           class="w100"
-          *ngFor="let product of products"
+          *ngFor="let product of products; let i = index"
           [id]="product.balanceProduct"
         >
-          <app-card [data]="product"> </app-card>
+          <app-card [data]="product" (change)="cardChange($event, i)">
+          </app-card>
         </ng-template>
       </owl-carousel-o>
     </div>
     <!-- END Products -->
     <!-- Associate Button -->
     <div class="default-row justify-center align-center">
-      <button class="primary-button">Asociar a objetivo</button>
+      <button class="primary-button" [disabled]="isAsociarButtonDisabled()">Asociar a objetivo</button>
     </div>
     <!-- END Associate Button -->
   </div>
