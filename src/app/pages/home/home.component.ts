@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
     fluidSpeed: true,
     autoWidth: true,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -64,8 +64,14 @@ export class HomeComponent implements OnInit {
       700: {
         items: 1.8,
       },
+      750: {
+        items: 2,
+      },
       800: {
         items: 2.2,
+      },
+      900: {
+        items: 2.5,
       },
       1000: {
         items: 2.8,
