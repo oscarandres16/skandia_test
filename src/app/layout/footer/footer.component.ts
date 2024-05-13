@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { Link, SocialMediaLink } from '../../interfaces/footer.interface';
 
+/**
+ * Componente que muestra el footer de la aplicación.
+ */
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -11,14 +14,26 @@ import { Link, SocialMediaLink } from '../../interfaces/footer.interface';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent implements OnInit {
+  /**
+   * Lista de links del footer.
+   */
   public links: Link[] = [];
+  /**
+   * Lista de links de redes sociales.
+   */
   public socialMediaLinks: SocialMediaLink[] = [];
 
+  /**
+   * Inicialización del componente.
+   */
   ngOnInit(): void {
     this.getLinks();
     this.getSocialMediaLinks();
   }
 
+  /**
+   * Obtiene los links del footer.
+   */
   private getLinks(): void {
     this.links = [
       { name: 'Términos y Condiciones Canales de Servicio', url: '#' },
@@ -33,7 +48,10 @@ export class FooterComponent implements OnInit {
     ];
   }
 
-  getSocialMediaLinks() {
+  /**
+   * Obtiene los links de redes sociales.
+   */
+  private getSocialMediaLinks() {
     this.socialMediaLinks = [
       {
         name: 'Facebook',

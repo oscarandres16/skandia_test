@@ -10,6 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
 import { MenuItem } from '../../interfaces/navbar.interface';
 
+/**
+ * Componente que muestra la barra de navegación de la aplicación.
+ */
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -21,22 +24,41 @@ import { MenuItem } from '../../interfaces/navbar.interface';
     MatDividerModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
+  /**
+   * Indica si el menú lateral está expandido.
+   */
   public sidenavExpanded: boolean = false;
+  /**
+   * Items del menú.
+   */
   public menuItems: MenuItem[] = [];
+  /**
+   * Item seleccionado del menú.
+   */
   public selectedMenuItem: MenuItem | null = null;
 
+  /**
+   * Constructor del componente.
+   * @param {Router} router - Servicio de enrutamiento
+   */
   constructor(private router: Router) {}
 
+  /**
+   * Inicialización del componente.
+   */
   ngOnInit(): void {
     this.getMenuItems();
   }
 
+  /**
+   * Obtiene los items del menú.
+   */
   private getMenuItems(): void {
     this.menuItems = [
       {
@@ -61,6 +83,10 @@ export class NavbarComponent implements OnInit {
     this.selectedMenuItem = this.menuItems[0];
   }
 
+  /**
+   * Navega a la ruta del item del menú.
+   * @param {MenuItem} menuItem - Item del menú
+   */
   public navigateTo(menuItem: MenuItem) {
     this.selectedMenuItem = menuItem;
     this.router.navigate([menuItem.route]);

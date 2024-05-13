@@ -7,8 +7,17 @@ import {
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+/**
+ * Interceptor HTTP personalizado.
+ */
 @Injectable()
 export class CustomHttpInterceptor implements HttpInterceptor {
+  /**
+   * Intercepta una petición HTTP.
+   * @param request - Petición HTTP
+   * @param next - Handler HTTP
+   * @returns - Observable de eventos HTTP
+   */
   intercept(
     request: HttpRequest<any>,
     next: HttpHandler

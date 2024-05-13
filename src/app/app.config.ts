@@ -7,6 +7,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { routes } from './app.routes';
 import { CustomHttpInterceptor } from './http.interceptor';
 
+/**
+ * Configuración de la aplicación.
+ */
 export const appConfig: ApplicationConfig = {
   providers: [
     provideProtractorTestingSupport(),

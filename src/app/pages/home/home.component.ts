@@ -9,6 +9,10 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CardComponent } from '../../components/card/card.component';
 import { Product } from '../../interfaces/product.interface';
 import { HomeService } from '../../services/home.service';
+
+/**
+ * Componente que muestra la página de inicio de la aplicación.
+ */
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -28,16 +32,22 @@ import { HomeService } from '../../services/home.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
+  /**
+   * Lista de productos.
+   */
   public products: Product[] = [];
+  /**
+   * Opciones personalizadas del carrusel.
+   */
   public customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
     dots: false,
     fluidSpeed: true,
     autoWidth: true,
-    // autoplay: true,
-    // autoplayTimeout: 3000,
-    // autoplayHoverPause: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 0.75,
@@ -77,12 +87,22 @@ export class HomeComponent implements OnInit {
     navText: ['<', '>'],
   };
 
+  /**
+   * Constructor del componente.
+   * @param {HomeService} homeService - Servicio de la página de inicio.
+   */
   constructor(private homeService: HomeService) {}
 
+  /**
+   * Inicialización del componente.
+   */
   ngOnInit(): void {
     this.getProducts();
   }
 
+  /**
+   * Obtiene los productos.
+   */
   private getProducts(): void {
     const newProduct: Product = {
       nameProduct: '',
@@ -99,11 +119,20 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  cardChange($event: any, index: number) {
+  /**
+   * Selecciona o deselecciona el producto.
+   * @param {boolean} $event - Evento de cambio de tarjeta.
+   * @param {number} index - Índice de la tarjeta.
+   */
+  public cardChange($event: boolean, index: number): void {
     this.products[index].selected = $event;
   }
 
-  isAsociarButtonDisabled(): boolean {
+  /**
+   * Método llamado para validar si el botón de asociar está deshabilitado.
+   * @returns {boolean} - Indica si el botón de asociar está deshabilitado.
+   */
+  public isAsociarButtonDisabled(): boolean {
     return this.products.filter((product) => product.selected).length === 0;
   }
 }
