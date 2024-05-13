@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MenuItem } from '../../interfaces/navbar.interface';
 
 /**
@@ -25,6 +25,7 @@ import { MenuItem } from '../../interfaces/navbar.interface';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
+    RouterModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -65,37 +66,37 @@ export class NavbarComponent implements OnInit {
         id: 1,
         title: 'Inicio',
         iconUrl: '/assets/imgs/svgs/home.svg',
-        route: '/',
+        route: '/home',
       },
       {
         id: 2,
         title: 'Contratos',
         iconUrl: '/assets/imgs/svgs/hoja1.svg',
-        route: '#',
+        route: '/contratos',
       },
       {
         id: 3,
         title: 'Acciones',
         iconUrl: '/assets/imgs/svgs/Tool.svg',
-        route: '#',
+        route: '/acciones',
       },
       {
         id:4,
         title: 'Objetivos',
         iconUrl: '/assets/imgs/svgs/star.svg',
-        route: '#',
+        route: '/objetivos',
       },
       {
         id: 5,
         title: 'Herramientas',
         iconUrl: '/assets/imgs/svgs/money.svg',
-        route: '#',
+        route: '/herramientas',
       },
       {
         id: 6,
         title: 'Servicio al cliente',
         iconUrl: '/assets/imgs/svgs/talk2.svg',
-        route: '#',
+        route: '/servicio-al-cliente',
       }
     ];
     this.selectedMenuItem = this.menuItems[0];
