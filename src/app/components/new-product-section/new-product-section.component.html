@@ -1,0 +1,29 @@
+<div class="new-product">
+  <div class="new-card default-row gap-20 justify-space-between lt-md-column">
+    <div
+      class="w100 default-column gap-20 flex-5 leff-section"
+    >
+      <div class="default-row justify-start">
+        <div class="recommended-label">Producto recomendado</div>
+      </div>
+      <div class="flex-1 w100 default-column justify-start align-center">
+        <h1 class="we-recommend">
+          ¡Te recomendamos estos productos para
+          <span class="important-text">Conocer sobrino</span>!
+        </h1>
+      </div>
+    </div>
+    <div style="width: 360px">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template
+          carouselSlide
+          class="w100"
+          *ngFor="let product of newProducts; let i = index"
+          [id]="product.code"
+        >
+          <app-card-with-image [data]="product"></app-card-with-image>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>

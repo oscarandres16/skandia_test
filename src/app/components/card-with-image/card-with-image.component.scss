@@ -1,0 +1,113 @@
+@import "../../../variables.scss";
+
+mat-card {
+  width: 352px;
+  height: 100%;
+  -webkit-box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+  border-bottom: 5px solid;
+
+  @media screen and (max-width: 459px) {
+    width: 80vw;
+  }
+
+  mat-card-content {
+    padding: 0;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0px -2px 10px -3px $green;
+    -moz-box-shadow: 0px -2px 10px -3px $green;
+    box-shadow: 0px -2px 10px -3px $green;
+  }
+
+  &.primary {
+    border-color: $light-green-2;
+  }
+  &.secondary {
+    border-color: $light-blue;
+  }
+  &.tertiary {
+    border-color: $blue;
+  }
+  &.new {
+    border-color: $dark-orange;
+  }
+
+  h4,
+  p,
+  strong {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif !important;
+  }
+
+  .image-section {
+    .bg-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      max-height: 158px;
+    }
+    .top-row {
+      position: absolute;
+      top: 10px;
+      width: 90%;
+      padding: 10px;
+
+      .favorite-icon {
+        color: $green;
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24 !important;
+      }
+      .favorite-icon-selected {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24 !important;
+      }
+
+      .product-type-label {
+        color: $dark-gray;
+        font-weight: 600;
+        font-size: 10px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 2px;
+
+        &.primary {
+          background-color: $light-green-2;
+        }
+        &.secondary {
+          background-color: $light-blue;
+        }
+        &.tertiary {
+          background-color: $blue;
+        }
+        &.new {
+          background-color: $dark-orange;
+        }
+      }
+    }
+  }
+
+  .info-section {
+    padding: 0px 20px;
+    padding-bottom: 20px;
+
+    a {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .details {
+      img {
+        color: $blue;
+        width: 16px;
+        height: 16px;
+      }
+      span,
+      strong {
+        font-family: "Verdana", sans-serif;
+        font-size: 12px;
+      }
+    }
+  }
+}

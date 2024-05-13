@@ -7,8 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CardComponent } from '../../components/card/card.component';
+import { NewProductSectionComponent } from '../../components/new-product-section/new-product-section.component';
 import { Product } from '../../interfaces/product.interface';
-import { HomeService } from '../../services/home.service';
+import { ProductsService } from '../../services/products.service';
 
 /**
  * Componente que muestra la página de inicio de la aplicación.
@@ -27,6 +28,7 @@ import { HomeService } from '../../services/home.service';
     MatIconModule,
     CurrencyPipe,
     CardComponent,
+    NewProductSectionComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -92,12 +94,16 @@ export class HomeComponent implements OnInit {
     nav: true,
     navText: ['<', '>'],
   };
+  /**
+   * Indica si se muestra el producto nuevo.
+   */
+  public showNewProduct: boolean = false;
 
   /**
    * Constructor del componente.
-   * @param {HomeService} homeService - Servicio de la página de inicio.
+   * @param {ProductsService} productsService - Servicio de productos.
    */
-  constructor(private homeService: HomeService) {}
+  constructor(private productsService: ProductsService) {}
 
   /**
    * Inicialización del componente.
@@ -118,7 +124,7 @@ export class HomeComponent implements OnInit {
       detaildProduct: '',
       productType: 'new',
     };
-    this.homeService
+    this.productsService
       .getProducts()
       ?.subscribe((products: { listCard: Product[] }) => {
         this.products = products.listCard;
@@ -133,6 +139,9 @@ export class HomeComponent implements OnInit {
    */
   public cardChange($event: boolean, index: number): void {
     this.products[index].selected = $event;
+    if(this.products[index].productType === 'new') {
+      this.showNewProduct = !this.showNewProduct;
+    }
   }
 
   /**

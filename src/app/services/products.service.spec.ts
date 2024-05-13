@@ -3,18 +3,18 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { HomeService } from './home.service';
+import { ProductsService } from './products.service';
 
-describe('HomeService', () => {
-  let service: HomeService;
+describe('ProductsService', () => {
+  let service: ProductsService;
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [HomeService],
+      providers: [ProductsService],
     });
-    service = TestBed.inject(HomeService);
+    service = TestBed.inject(ProductsService);
     httpMock = TestBed.inject(HttpTestingController);
   });
 

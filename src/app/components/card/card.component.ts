@@ -52,7 +52,7 @@ export class CardComponent implements OnInit {
   } = {
     ahorro: { card: 'primary', iconUrl: '/assets/imgs/svgs/Happy.svg' },
     inversion: {
-      card: 'seconadry',
+      card: 'secondary',
       iconUrl: '/assets/imgs/svgs/trofeo.svg',
     },
     credito: {
@@ -98,5 +98,12 @@ export class CardComponent implements OnInit {
         this.change.emit(checked);
       }
     );
+  }
+
+  /**
+   * Muestra la sección de producto nuevo.
+   */
+  public showNewProductSection() {
+    this.change.emit(true);
   }
 }

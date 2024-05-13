@@ -1,0 +1,50 @@
+<!-- Product card -->
+<mat-card [class]="cardClass">
+  <mat-card-content>
+    <div class="default-column gap-20 justify-space-between">
+      <!-- Image section -->
+      <div class="default-column align-center justify-center image-section">
+        <img
+          class="bg-image"
+          src="../../../assets/imgs/pngs/new-product-banner.png"
+          alt="Alt"
+        />
+        <div class="default-row justify-space-between align-center top-row">
+          <div class="product-type-label {{ cardClass }}">
+            {{ data.productTypeLabel }}
+          </div>
+          <mat-icon
+            color="primary"
+            class="favorite-icon"
+            [ngClass]="{ 'favorite-icon-selected': selected }"
+            (click)="selected = !selected"
+          >
+            favorite
+          </mat-icon>
+        </div>
+      </div>
+      <!-- END Image section -->
+      <!-- Info section -->
+      <div class="default-column gap-20 justify-space-between info-section">
+        <p [innerHTML]="data.description"></p>
+        <a
+          [href]="data.redirection.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ data.redirection.text }}
+        </a>
+        <div class="default-column gap-10 details">
+          <div
+            *ngFor="let helpText of data.helpTexts"
+            class="default-row justify-start align-center gap-10"
+          >
+            <img class="icon-img" [src]="helpText.helpIcon" alt="" />
+            <span [innerHTML]="helpText.helpText"></span>
+          </div>
+        </div>
+      </div>
+      <!-- END Info section -->
+    </div>
+  </mat-card-content>
+</mat-card>
