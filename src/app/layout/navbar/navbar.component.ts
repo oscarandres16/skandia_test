@@ -70,6 +70,8 @@ export class NavbarComponent implements OnInit {
   /**
    * Constructor del componente.
    * @param {Router} router - Servicio de enrutamiento
+   * @param {GlobalConfigService} globalConfigService - Servicio de configuración global
+   * @param {BreakpointObserver} breakpointObserver - Observador de cambios en el tamaño de la pantalla
    */
   constructor(
     private router: Router,
@@ -79,6 +81,9 @@ export class NavbarComponent implements OnInit {
     this.mediaQuery();
   }
 
+  /**
+   * Verifica el tamaño de la pantalla.
+   */
   mediaQuery() {
     this.breakpointObserver
       .observe([Breakpoints.Small, Breakpoints.XSmall])
