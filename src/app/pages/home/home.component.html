@@ -4,6 +4,7 @@
       <div class="w100">
         <a [routerLink]="['/home']" class="default-row gap-5 breadcrumb">
           <img
+            class="icon-img"
             src="/skandia_test/assets/imgs/svgs/home-2.svg"
             alt="Inicio"
             title="Inicio"
@@ -115,7 +116,9 @@
     <!-- END Products -->
     <!-- Associate Button -->
     <div class="default-row justify-center align-center">
-      <button class="primary-button" [disabled]="isAsociarButtonDisabled()">Asociar a objetivo</button>
+      <button class="primary-button" [disabled]="isAsociarButtonDisabled()">
+        Asociar a objetivo
+      </button>
     </div>
     <!-- END Associate Button -->
   </div>

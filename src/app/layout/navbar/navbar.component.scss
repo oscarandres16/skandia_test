@@ -1,7 +1,6 @@
-@import '../../../variables.scss';
+@import "../../../variables.scss";
 
 mat-toolbar {
-  background-color: $white;
   border-bottom: 1px solid $light-gray-2;
 }
 
@@ -114,6 +113,10 @@ mat-drawer {
       color: $white;
     }
   }
+}
+
+.toggle-dark-mode {
+  color: $dark-gray;
 }
 
 ::ng-deep .mat-mdc-menu-panel {

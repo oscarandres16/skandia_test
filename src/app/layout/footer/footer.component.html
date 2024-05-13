@@ -8,7 +8,7 @@
         class="contact-info-container w100 default-column gap-5 flex-5 lt-sm-align-center"
       >
         <img
-          class="footer-logo"
+          class="footer-logo icon-img"
           src="/skandia_test/assets/imgs/svgs/Group 123.svg"
           alt="Skandia"
           title="Skandia"
@@ -66,6 +66,7 @@
         <div *ngFor="let socialMedia of socialMediaLinks">
           <a [href]="socialMedia?.url" target="_blank">
             <img
+              class="icon-img"
               [src]="socialMedia?.iconUrl"
               [alt]="socialMedia?.name"
               [title]="socialMedia?.name"

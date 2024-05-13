@@ -6,7 +6,12 @@
     <div class="w100 default-row navbar-container">
       <!-- Logo and Slogan -->
       <div class="default-row gap-10 align-center justify-start flex-1">
-        <img src="/skandia_test/assets/imgs/svgs/Group 123.svg" alt="" />
+        <img
+          class="icon-img"
+          src="/skandia_test/assets/imgs/svgs/Group 123.svg"
+          alt="Logo"
+          title="Logo"
+        />
         <mat-divider></mat-divider>
         <h2 class="title lt-sm-hide">Plan Financiero Digital - FPX</h2>
       </div>
@@ -17,6 +22,7 @@
       >
         <div class="icon-and-link">
           <img
+            class="icon-img"
             src="/skandia_test/assets/imgs/svgs/Happy.svg"
             alt="Tu Financial Planner"
             title="Tu Financial Planner"
@@ -25,6 +31,7 @@
         </div>
         <div class="icon-and-link">
           <img
+            class="icon-img"
             src="/skandia_test/assets/imgs/svgs/hand3.svg"
             alt="Aportes"
             title="Aportes"
@@ -38,6 +45,10 @@
             title="Preguntas frecuentes"
           />
           <a href="#">Preguntas frecuentes</a>
+        </div>
+        <div class="default-row justify-center align-center gap-5">
+          <mat-icon class="toggle-dark-mode">dark_mode</mat-icon>
+          <mat-slide-toggle [formControl]="toggleDarkTheme"></mat-slide-toggle>
         </div>
       </div>
       <!-- END Links and PQRS -->
@@ -60,6 +71,7 @@
             </div>
             <div class="icon-and-link">
               <img
+                class="icon-img"
                 src="/skandia_test/assets/imgs/svgs/hand3.svg"
                 alt="Aportes"
                 title="Aportes"
@@ -74,6 +86,12 @@
               />
               <a href="#">Preguntas frecuentes</a>
             </div>
+            <div class="default-row justify-center align-center gap-5">
+              <mat-icon class="toggle-dark-mode">dark_mode</mat-icon>
+              <mat-slide-toggle
+                [formControl]="toggleDarkTheme"
+              ></mat-slide-toggle>
+            </div>
           </div>
         </mat-menu>
       </div>
@@ -87,7 +105,13 @@
     hasBackdrop="false"
     mode="over"
     [opened]="true"
-    [style.width.px]="sidenavExpanded ? 200 : 50"
+    [style.width.px]="
+      sizeDisplay === 'phone' && !sidenavExpanded
+        ? 0
+        : sidenavExpanded
+        ? 200
+        : 50
+    "
   >
     <mat-nav-list class="p-0">
       <mat-list-item *ngFor="let menuItem of menuItems" class="h100 p-0">
@@ -100,6 +124,7 @@
           (mouseleave)="sidenavExpanded = false"
         >
           <img
+            class="icon-img"
             [src]="menuItem.iconUrl"
             [alt]="menuItem.title"
             [title]="menuItem.title"
@@ -109,7 +134,11 @@
       </mat-list-item>
     </mat-nav-list>
   </mat-drawer>
-  <div style="position: relative; left: 50px; margin-right: 50px">
+  <div
+    style="position: relative"
+    [style.left]="sizeDisplay === 'phone' ? '0' : '50px'"
+    [style.marginRight]="sizeDisplay === 'phone' ? '0' : '50px'"
+  >
     <ng-content></ng-content>
   </div>
 </mat-drawer-container>

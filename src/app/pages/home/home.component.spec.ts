@@ -42,6 +42,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     const spy = jasmine.createSpyObj('HomeService', ['getProducts']);
+
     await TestBed.configureTestingModule({
       imports: [
         HomeComponent,
@@ -79,6 +80,6 @@ describe('HomeComponent', () => {
   it('associat button is disabled', () => {
     homeService.getProducts.and.returnValue(of(response));
     component['getProducts']();
-    expect(component.isAsociarButtonDisabled()).toBeFalsy();
+    expect(component.isAsociarButtonDisabled()).toBeFalse();
   });
 });

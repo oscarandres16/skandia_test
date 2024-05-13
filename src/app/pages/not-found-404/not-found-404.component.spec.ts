@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { RouterTestingModule } from '@angular/router/testing';
 import { NotFound404Component } from './not-found-404.component';
 
 describe('NotFound404Component', () => {
@@ -8,10 +9,9 @@ describe('NotFound404Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NotFound404Component]
-    })
-    .compileComponents();
-    
+      imports: [NotFound404Component, RouterTestingModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(NotFound404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
