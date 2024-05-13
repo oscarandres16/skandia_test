@@ -68,8 +68,9 @@
     </mat-card-content>
   </mat-card>
   <div
-    class="objetives-section default-column gap-10 align-center justify-center"
+    class="objetives-section default-column gap-20 align-center justify-center"
   >
+    <!-- Text Section -->
     <h2>
       ¡Vamos por esos
       <span class="important-text">
@@ -90,5 +91,16 @@
         />
       </div>
     </div>
+    <!-- END Text Section -->
+    <!-- Products -->
+    <div class="default-row gap-20">
+      <app-card *ngFor="let product of products" [data]="product"></app-card>
+    </div>
+    <!-- END Products -->
+    <!-- Associate Button -->
+    <div class="default-row justify-center align-center">
+      <button class="associate-button">Asociar a objetivo</button>
+    </div>
+    <!-- END Associate Button -->
   </div>
 </div>

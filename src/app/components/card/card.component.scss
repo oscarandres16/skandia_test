@@ -1,0 +1,58 @@
+mat-card {
+  width: 352px;
+  min-height: 402px;
+  height: max-content;
+  -webkit-box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+  border-bottom: 5px solid;
+
+  &:hover {
+    -webkit-box-shadow: 0px -2px 10px -3px #00c83c;
+    -moz-box-shadow: 0px -2px 10px -3px #00c83c;
+    box-shadow: 0px -2px 10px -3px #00c83c;
+  }
+
+  h4,
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &.primary {
+    border-color: #a4d071;
+  }
+  &.secondary {
+    border-color: #a5d7e1;
+  }
+  &.tertiary {
+    border-color: #63aabc;
+  }
+  &.new {
+    border-color: #ff9460;
+  }
+
+  .product-balance {
+    color: #00c83c;
+  }
+
+  .hint-zone {
+    margin-top: 20px;
+    background-color: #ededed;
+    border-radius: 1px;
+
+    img {
+      position: relative;
+      top: -20px;
+      width: 32px;
+      height: 32px;
+    }
+
+    p {
+      padding: 10px 20px;
+      text-align: center;
+      position: relative;
+      top: -20px;
+    }
+  }
+}
