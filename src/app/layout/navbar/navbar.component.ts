@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MenuItem } from '../../interfaces/navbar.interface';
 
 /**
@@ -25,6 +25,7 @@ import { MenuItem } from '../../interfaces/navbar.interface';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
+    RouterModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -65,37 +66,37 @@ export class NavbarComponent implements OnInit {
         id: 1,
         title: 'Inicio',
         iconUrl: '/skandia_test/assets/imgs/svgs/home.svg',
-        route: '/',
+        route: '/home',
       },
       {
         id: 2,
         title: 'Contratos',
         iconUrl: '/skandia_test/assets/imgs/svgs/hoja1.svg',
-        route: '#',
+        route: '/contratos',
       },
       {
         id: 3,
         title: 'Acciones',
         iconUrl: '/skandia_test/assets/imgs/svgs/Tool.svg',
-        route: '#',
+        route: '/acciones',
       },
       {
         id:4,
         title: 'Objetivos',
         iconUrl: '/skandia_test/assets/imgs/svgs/star.svg',
-        route: '#',
+        route: '/objetivos',
       },
       {
         id: 5,
         title: 'Herramientas',
         iconUrl: '/skandia_test/assets/imgs/svgs/money.svg',
-        route: '#',
+        route: '/herramientas',
       },
       {
         id: 6,
         title: 'Servicio al cliente',
         iconUrl: '/skandia_test/assets/imgs/svgs/talk2.svg',
-        route: '#',
+        route: '/servicio-al-cliente',
       }
     ];
     this.selectedMenuItem = this.menuItems[0];
@@ -107,6 +108,7 @@ export class NavbarComponent implements OnInit {
    */
   public navigateTo(menuItem: MenuItem) {
     this.selectedMenuItem = menuItem;
+    this.sidenavExpanded = false;
     this.router.navigate([menuItem.route]);
   }
 }

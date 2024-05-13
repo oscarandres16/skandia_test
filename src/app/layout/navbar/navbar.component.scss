@@ -25,7 +25,10 @@ mat-icon {
 }
 
 .navbar-container {
-  padding: 20px;
+  padding: 20px 130px;
+  @media screen and (max-width: 1279px) {
+    padding: 20px;
+  }
 }
 
 .title {
@@ -78,6 +81,8 @@ mat-drawer {
     padding: 0px 15px;
     transition: all 0.1s ease 0s;
     font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
     img {
       width: 16px;
       height: auto;
@@ -96,6 +101,8 @@ mat-drawer {
     background-color: $green;
     color: $white;
     font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
     img {
       width: 16px;
       height: auto;
