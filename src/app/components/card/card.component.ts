@@ -50,14 +50,14 @@ export class CardComponent implements OnInit {
       iconUrl?: string;
     };
   } = {
-    ahorro: { card: 'primary', iconUrl: '../../../assets/imgs/svgs/Happy.svg' },
+    ahorro: { card: 'primary', iconUrl: '/assets/imgs/svgs/Happy.svg' },
     inversion: {
       card: 'seconadry',
-      iconUrl: '../../../assets/imgs/svgs/trofeo.svg',
+      iconUrl: '/assets/imgs/svgs/trofeo.svg',
     },
     credito: {
       card: 'tertiary',
-      iconUrl: '../../../assets/imgs/svgs/hand3.svg',
+      iconUrl: '/assets/imgs/svgs/hand3.svg',
     },
     new: { card: 'new' },
   };

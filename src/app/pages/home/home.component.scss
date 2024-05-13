@@ -1,7 +1,7 @@
 @import '../../../variables.scss';
 
 .bg-home {
-  background: url("../../../assets/imgs/pngs/iStock-480003814.png");
+  background: url("/assets/imgs/pngs/iStock-480003814.png");
   background-position: 0% 15%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 
 .bg-banner {
   background: linear-gradient(rgba(63, 63, 63, 0), rgba(112, 112, 112, 0.35)),
-    url("../../../assets/imgs/jpgs/pexels-eberhardgross-2347011.jpg");
+    url("/assets/imgs/jpgs/pexels-eberhardgross-2347011.jpg");
   background-position: 0% 15%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -71,7 +71,7 @@
   .card-content {
     padding: 20px;
     height: 200px;
-    background-image: url("../../../assets/imgs/pngs/objetive-card-bg.png");
+    background-image: url("/assets/imgs/pngs/objetive-card-bg.png");
     background-size: auto 100px;
     background-repeat: no-repeat;
     background-position: bottom right;

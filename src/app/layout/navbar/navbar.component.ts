@@ -64,7 +64,7 @@ export class NavbarComponent implements OnInit {
       {
         id: 1,
         title: 'Home',
-        iconUrl: '../../../assets/imgs/svgs/home.svg',
+        iconUrl: '/assets/imgs/svgs/home.svg',
         route: '/',
       },
       // {

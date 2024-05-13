@@ -74,14 +74,14 @@ mat-card {
         rgba(255, 255, 255, 0.5),
         rgba(255, 255, 255, 0.5)
       ),
-      url("../../../assets/imgs/jpgs/pexels-wildlittlethingsphoto-697243.jpg");
+      url("/assets/imgs/jpgs/pexels-wildlittlethingsphoto-697243.jpg");
     background-size: 200%;
     background-position: center center;
     background-repeat: no-repeat;
     height: 100%;
 
     .new-card {
-      background-image: url("../../../assets/imgs/svgs/Icon\ awesome-medal.svg");
+      background-image: url("/assets/imgs/svgs/Icon\ awesome-medal.svg");
       background-repeat: no-repeat;
       background-size: 43px;
       background-position: 5% 0%;
