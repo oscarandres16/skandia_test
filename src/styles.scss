@@ -108,6 +108,20 @@ $skandia-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($skandia-theme);
 
+$skandia-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $skandia-accent,
+      accent: $skandia-primary,
+      warn: $skandia-warn,
+    ),
+  )
+);
+
+.darkMode {
+  @include mat.all-component-colors($skandia-dark-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
@@ -130,6 +144,57 @@ body {
 
 * {
   color: $dark-gray;
+}
+
+.darkMode {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .label,
+  strong,
+  .links-container a,
+  .contact-info-container div {
+    color: $white !important;
+  }
+
+  .toggle-dark-mode {
+    color: $green !important;
+  }
+
+  mat-toolbar {
+    border-bottom: 1px solid $dark-gray !important;
+  }
+
+
+  mat-drawer {
+    background-color: $dark-gray !important;
+    color: $white !important;
+    span {
+      color: $white !important;
+    }
+  }
+
+  .icon-img {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(572%)
+      hue-rotate(320deg) brightness(119%) contrast(100%);
+  }
+
+  .hint-zone {
+    background-color: transparent !important;
+    border: 1px solid $white;
+    &::before {
+      content: "";
+      position: absolute;
+      border: 3px solid var(--mdc-elevated-card-container-color);
+      margin: 10px;
+      top: 63%;
+      width: 35px;
+    }
+  }
 }
 
 h1,

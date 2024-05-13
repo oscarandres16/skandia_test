@@ -86,6 +86,10 @@ mat-card {
       background-size: 43px;
       background-position: 5% 0%;
       padding: 20px;
+
+      h4 {
+        color: $dark-gray !important;
+      }
     }
 
     .recommended-label {

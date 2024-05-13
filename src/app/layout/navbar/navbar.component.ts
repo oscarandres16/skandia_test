@@ -1,14 +1,26 @@
+import {
+  BreakpointObserver,
+  BreakpointState,
+  Breakpoints,
+} from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  UntypedFormControl,
+} from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
 import { MenuItem } from '../../interfaces/navbar.interface';
+import { GlobalConfigService } from '../../services/config.service';
 
 /**
  * Componente que muestra la barra de navegación de la aplicación.
@@ -18,6 +30,8 @@ import { MenuItem } from '../../interfaces/navbar.interface';
   standalone: true,
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -25,6 +39,7 @@ import { MenuItem } from '../../interfaces/navbar.interface';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
+    MatSlideToggleModule,
     RouterModule,
   ],
   templateUrl: './navbar.component.html',
@@ -43,18 +58,44 @@ export class NavbarComponent implements OnInit {
    * Item seleccionado del menú.
    */
   public selectedMenuItem: MenuItem | null = null;
+  /**
+   * Indica si se activa el tema oscuro.
+   */
+  public toggleDarkTheme: UntypedFormControl = new UntypedFormControl(false);
+  /**
+   * Tamaño de la pantalla.
+   */
+  public sizeDisplay: 'phone' | 'web' = 'web';
 
   /**
    * Constructor del componente.
    * @param {Router} router - Servicio de enrutamiento
    */
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private globalConfigService: GlobalConfigService,
+    public breakpointObserver: BreakpointObserver
+  ) {
+    this.mediaQuery();
+  }
+
+  mediaQuery() {
+    this.breakpointObserver
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((result: BreakpointState) => {
+        this.sizeDisplay = result.matches ? 'phone' : 'web';
+      });
+  }
 
   /**
    * Inicialización del componente.
    */
   ngOnInit(): void {
     this.getMenuItems();
+    this.toggleDarkTheme.valueChanges.subscribe((darkMode) => {
+      const darkClassName = 'darkMode';
+      this.globalConfigService.darkMode.next(darkMode ? darkClassName : '');
+    });
   }
 
   /**
@@ -81,7 +122,7 @@ export class NavbarComponent implements OnInit {
         route: '/acciones',
       },
       {
-        id:4,
+        id: 4,
         title: 'Objetivos',
         iconUrl: '/assets/imgs/svgs/star.svg',
         route: '/objetivos',
@@ -97,7 +138,7 @@ export class NavbarComponent implements OnInit {
         title: 'Servicio al cliente',
         iconUrl: '/assets/imgs/svgs/talk2.svg',
         route: '/servicio-al-cliente',
-      }
+      },
     ];
     this.selectedMenuItem = this.menuItems[0];
   }
