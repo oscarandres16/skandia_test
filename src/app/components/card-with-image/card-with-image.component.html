@@ -4,11 +4,7 @@
     <div class="default-column gap-20 justify-space-between">
       <!-- Image section -->
       <div class="default-column align-center justify-center image-section">
-        <img
-          class="bg-image"
-          src="../../../assets/imgs/pngs/new-product-banner.png"
-          alt="Alt"
-        />
+        <img class="bg-image" [src]="data.image" alt="Product Image" />
         <div class="default-row justify-space-between align-center top-row">
           <div class="product-type-label {{ cardClass }}">
             {{ data.productTypeLabel }}
