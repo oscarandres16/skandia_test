@@ -1,27 +1,47 @@
-# Skandia
+<img src="https://oscarandres16.github.io/skandia_test/assets/imgs/svgs/Group%20123.svg" alt="Logo de Skandia" width="200"> 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+# Prueba técnica
 
-## Development server
+Bienvenido al repositorio de la prueba técnica para el Holding financiero Skandia. Este repositorio contiene el código fuente de un sitio aplicativo desarrollado con Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instrucciones de Ejecución
 
-## Code scaffolding
+Para ejecutar la aplicación en tu entorno local, sigue estos pasos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clona este repositorio a tu máquina local.
+2. Abre una terminal en la carpeta del proyecto.
+3. Ejecuta el siguiente comando para instalar las dependencias:
+`npm i` o `yarn install`
+4. Una vez instaladas las dependencias, inicia la aplicación con:
+`ng serve` o `npm run start`
+5. Abre tu navegador web y ve a `http://localhost:4200/` para ver la aplicación en acción.
 
-## Build
+## Si no desea ejecutar en local
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+La aplicación se encuentra desplegada en el siguiente enlace ➡️ [Skandia Test App 🌐](https://oscarandres16.github.io/skandia_test/home)
 
-## Running unit tests
+## Tecnologías Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular:** Utilizamos la última versión estable de Angular. [![Angular](https://img.shields.io/badge/Angular-latest-green.svg)](https://angular.io/)
+- **Angular Material:** Se utilizó la última versión de Angular Material (m3). [![Angular Material](https://img.shields.io/badge/Angular_Material-m3-blue.svg)](https://material.angular.io/)
+- **Karma y Jasmine:** Las pruebas unitarias se realizaron con Karma y Jasmine. [![Karma](https://img.shields.io/badge/Karma-Test%20Runner-red.svg)](https://karma-runner.github.io/latest/index.html) [![Jasmine](https://img.shields.io/badge/Jasmine-Test%20Framework-purple.svg)](https://jasmine.github.io/)
+- **Compodoc:** La herramienta utilizada para generar la documentación es Compodoc. [![Compodoc](https://img.shields.io/badge/Compodoc-Documentation%20Generator-orange.svg)](https://compodoc.app/)
+- **angular-cli-ghpages:** La aplicación se encuentra desplegada haciendo uso de GitHub pages. [![Angular CLI GitHub Pages](https://img.shields.io/badge/Angular_CLI_GitHub_Pages-Deployed-brightgreen.svg)](https://github.com/angular/angular-cli-ghpages)
 
-## Running end-to-end tests
+## Funcionalidades Adicionales
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Modo Oscuro:** Se agregó un modo oscuro al aplicativo, el cual puede ser cambiado en la parte superior derecha del sitio usando el toggle.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Enlaces
+
+- 📑 **Documentación:** [Documentación del proyecto](https://oscarandres16.github.io/skandia_test_documentation/) 
+- 📊 **Reporte de Pruebas Unitarias:** [Reporte de cobertura de pruebas unitarias](https://oscarandres16.github.io/skandia_test_coverage/)
+- <img src="https://repository-images.githubusercontent.com/24195339/d4194dc2-d880-43f7-960c-ea30e05c6531" alt="Compodoc" width="20"> **Repositorio Angular:** [Angular](https://angular.io/)
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Material_Design_Logo.svg/1024px-Google_Material_Design_Logo.svg.png" alt="Compodoc" width="20"> **Angular Material:** [Angular Material](https://material.angular.io/)
+- <img src="https://avatars.githubusercontent.com/u/3284117?s=280&v=4" alt="Compodoc" width="20"> **Karma:** [Karma](https://karma-runner.github.io/latest/index.html)
+- <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Logo_jasmine.svg/1200px-Logo_jasmine.svg.png" alt="Compodoc" width="20"> **Jasmine:** [Jasmine](https://jasmine.github.io/)
+- <img src="https://avatars3.githubusercontent.com/u/23202313" alt="Compodoc" width="20"> **Compodoc:** [Compodoc](https://compodoc.app/)
+- **Aplicación Desplegada:** [Skandia Test App](https://oscarandres16.github.io/skandia_test/home)
+
+¡Diviértete explorando la aplicación! 😊🚀
