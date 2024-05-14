@@ -139,7 +139,7 @@ export class HomeComponent implements OnInit {
    */
   public cardChange($event: boolean, index: number): void {
     this.products[index].selected = $event;
-    if(this.products[index].productType === 'new') {
+    if (this.products[index].productType === 'new') {
       this.showNewProduct = !this.showNewProduct;
     }
   }
@@ -149,6 +149,10 @@ export class HomeComponent implements OnInit {
    * @returns {boolean} - Indica si el botón de asociar está deshabilitado.
    */
   public isAsociarButtonDisabled(): boolean {
-    return this.products.filter((product) => product.selected).length === 0;
+    return (
+      this.products
+        .slice(0, this.products.length - 1)
+        .filter((product) => product.selected).length === 0
+    );
   }
 }
